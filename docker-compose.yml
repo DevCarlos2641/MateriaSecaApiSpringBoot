@@ -1,0 +1,48 @@
+services:
+  mysql-container:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: db
+      MYSQL_DATABASE: materiaseca
+    volumes:
+      - mysql-data:/var/lib/mysql  # Monta el volumen mysql-data
+    networks:
+      - my-network
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: mysql-container
+    ports:
+      - "8082:80"
+    depends_on:
+      - mysql-container
+    networks:
+      - my-network
+
+  spring-boot-app:
+    image: mi-app-springboot
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-container:3306/materiaseca
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: db
+    depends_on:
+      - mysql-container
+    ports:
+      - "8080:8080"
+    networks:
+      - my-network
+
+  spring-boot-other-app:
+    image: other-app-springboot
+    ports:
+      - "8081:8081"
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:  # Define el volumen mysql-data
+  mysql-data:
