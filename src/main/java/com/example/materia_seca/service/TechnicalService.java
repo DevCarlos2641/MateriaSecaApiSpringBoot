@@ -1,5 +1,8 @@
 package com.example.materia_seca.service;
 
+import com.example.materia_seca.dto.OrchardDTO;
+import com.example.materia_seca.dto.TechnicalDTO;
+import com.example.materia_seca.dto.UserDTO;
 import com.example.materia_seca.entity.*;
 import com.example.materia_seca.model.ResponseMyRequests;
 import com.example.materia_seca.model.ResponseTechnical;
@@ -94,5 +97,4 @@ public class TechnicalService {
         response.setJuntas(localBoards);
         return ResponseEntity.ok(response);
     }
-
 }

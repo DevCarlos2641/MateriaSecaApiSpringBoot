@@ -1,4 +1,4 @@
-package com.example.materia_seca.entity;
+package com.example.materia_seca.dto;
 
 import lombok.Data;
 

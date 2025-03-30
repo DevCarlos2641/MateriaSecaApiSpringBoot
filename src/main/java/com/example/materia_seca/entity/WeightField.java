@@ -2,10 +2,8 @@ package com.example.materia_seca.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.proxy.HibernateProxy;
 
 import java.math.BigDecimal;
-import java.util.Objects;
 
 @Getter
 @Setter
@@ -13,7 +11,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @Entity
 @Table(name = "peso_campo")
-public class SampleWeight {
+public class WeightField {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

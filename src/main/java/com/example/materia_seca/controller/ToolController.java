@@ -7,14 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
 @RestController
 @RequestMapping("/tool")
 public class ToolController {
-
-    @Autowired
-    private RestTemplate restTemplate;
 
     @Autowired
     private ToolService service;
@@ -23,5 +19,4 @@ public class ToolController {
     public ResponseEntity<?> getTools (@PathVariable int id_junta_local){
         return service.getToolsByIdJunta(id_junta_local);
     }
-
 }

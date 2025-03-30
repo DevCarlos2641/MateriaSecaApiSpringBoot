@@ -30,10 +30,4 @@ public class MateriaSecaApplication {
 		};
 	}
 
-	//	For user other service
-	@Bean
-	public RestTemplate restTemplate() {
-		return new RestTemplate();
-	}
-
 }

@@ -1,10 +1,11 @@
 package com.example.materia_seca.service;
 
+import com.example.materia_seca.dto.MyRequestDTO;
+import com.example.materia_seca.dto.OrchardDTO;
 import com.example.materia_seca.entity.*;
 import com.example.materia_seca.model.RequestGetUrls;
 import com.example.materia_seca.model.ResponseOrchardLaboratory;
 import com.example.materia_seca.repository.OrchardRepository;
-import org.aspectj.weaver.ast.Or;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;

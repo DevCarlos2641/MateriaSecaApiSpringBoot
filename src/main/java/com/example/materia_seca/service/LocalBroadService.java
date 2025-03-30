@@ -1,9 +1,10 @@
 package com.example.materia_seca.service;
 
 import com.example.materia_seca.entity.LocalBoard;
-import com.example.materia_seca.entity.OrchardDTO;
+import com.example.materia_seca.dto.OrchardDTO;
 import com.example.materia_seca.repository.LocalBroadRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -30,4 +31,7 @@ public class LocalBroadService {
         return localBoards;
     }
 
+    public ResponseEntity<?> getJuntas() {
+        return ResponseEntity.ok(repository.findAll());
+    }
 }

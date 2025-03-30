@@ -1,6 +1,7 @@
 package com.example.materia_seca.controller;
 
 import com.example.materia_seca.model.RequestSampleField;
+import com.example.materia_seca.model.RequestSampleLaboratory;
 import com.example.materia_seca.service.SampleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +23,11 @@ public class SampleController {
     @PostMapping
     public ResponseEntity<?> postSamples(@RequestBody RequestSampleField sampleField){
         return service.uploadSamplesField(sampleField);
+    }
+
+    @PostMapping("/laboratory")
+    public ResponseEntity<?> postSampleLaboratory(@RequestBody RequestSampleLaboratory sampleLaboratory){
+        return service.uploadSampleLaboratory(sampleLaboratory);
     }
 
 

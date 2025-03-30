@@ -1,7 +1,7 @@
 package com.example.materia_seca.service;
 
 import com.example.materia_seca.entity.MyRequest;
-import com.example.materia_seca.entity.MyRequestDTO;
+import com.example.materia_seca.dto.MyRequestDTO;
 import com.example.materia_seca.model.CancelRequest;
 import com.example.materia_seca.repository.MyRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -65,8 +65,12 @@ public class MyRequestService {
         return ResponseEntity.ok("Request cancel");
     }
 
-    public void updateStatusRequest(int id, String status){
+    public void updateStatusRequest(int id, String status, Boolean dateF){
         MyRequest request = repository.getRequest(id);
+        if(dateF){
+            String date = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+            request.setFecha_fin(date);
+        }
         request.setStatus(status);
         repository.save(request);
     }

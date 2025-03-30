@@ -1,6 +1,6 @@
 package com.example.materia_seca.model;
 
-import com.example.materia_seca.entity.UserDTO;
+import com.example.materia_seca.dto.UserDTO;
 import lombok.Data;
 
 @Data

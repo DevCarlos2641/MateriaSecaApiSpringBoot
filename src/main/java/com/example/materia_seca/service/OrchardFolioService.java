@@ -1,7 +1,6 @@
 package com.example.materia_seca.service;
 
-import com.example.materia_seca.entity.Orchard;
-import com.example.materia_seca.entity.OrchardDTO;
+import com.example.materia_seca.dto.OrchardDTO;
 import com.example.materia_seca.entity.OrchardFolio;
 import com.example.materia_seca.repository.OrchardFolioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
