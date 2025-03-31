@@ -17,4 +17,14 @@ public class UserController {
     public ResponseEntity<?> getUser(@RequestBody RequestUser user){
         return service.verifiedUser(user);
     }
+
+    @GetMapping
+    public ResponseEntity<?> user(){
+        return ResponseEntity.ok("Pass the user");
+    }
+
+    @GetMapping("/other")
+    public ResponseEntity<?> userOther(){
+        return ResponseEntity.ok("Security");
+    }
 }
