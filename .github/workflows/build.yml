@@ -32,6 +32,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean build
 
+      - name: List build files (debug)
+        run: ls -la build/libs/
+
       - name: Upload JAR Artifact
         uses: actions/upload-artifact@v4
         with:

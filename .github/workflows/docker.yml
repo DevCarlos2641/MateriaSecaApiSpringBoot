@@ -24,7 +24,7 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t myorg/materia-seca-app:latest .
+        run: docker build -t carlos2641/materia-seca-app:latest .
 
       - name: Push Docker image
-        run: docker push myorg/materia-seca-app:latest
+        run: docker push carlos2641/materia-seca-app:latest
