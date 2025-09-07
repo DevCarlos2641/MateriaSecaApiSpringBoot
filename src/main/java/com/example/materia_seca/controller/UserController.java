@@ -1,5 +1,6 @@
 package com.example.materia_seca.controller;
 
+import com.example.materia_seca.dto.Example;
 import com.example.materia_seca.model.RequestUser;
 import com.example.materia_seca.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,15 +17,5 @@ public class UserController {
     @PostMapping
     public ResponseEntity<?> getUser(@RequestBody RequestUser user){
         return service.verifiedUser(user);
-    }
-
-    @GetMapping
-    public ResponseEntity<?> user(){
-        return ResponseEntity.ok("Pass the user");
-    }
-
-    @GetMapping("/other")
-    public ResponseEntity<?> userOther(){
-        return ResponseEntity.ok("Security");
     }
 }

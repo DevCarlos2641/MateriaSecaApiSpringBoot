@@ -23,6 +23,9 @@ public class UserService {
     private TechnicalService technicalService;
 
     public ResponseEntity<?> verifiedUser(RequestUser credential){
+        if(credential.getEmail().isEmpty() || credential.getPassword().isEmpty())
+            throw new RuntimeException("Credenciales incorrectas");
+
         User user = repository.findUserByEmail(credential.getEmail());
         if(user == null)
             return ResponseEntity.notFound().build();

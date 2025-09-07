@@ -28,7 +28,7 @@ public class SecurityConfig {
                 .sessionManagement(session->
                         session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(auth-> {
-                    auth.requestMatchers("/user").permitAll();
+                    auth.requestMatchers("/user/**").permitAll();
                     auth.anyRequest().authenticated();
                 })
                 .cors(Customizer.withDefaults())

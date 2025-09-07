@@ -36,6 +36,7 @@ public class OrchardService {
         dto.setNombre(orchard.getNombre());
         dto.setLocalidad(orchard.getLocalidad());
         dto.setCentroide(orchard.getCentroide());
+        dto.setHectareas(orchard.getHectareas());
         dto.setPronostico_de_cosecha(orchard.getPronostico_de_cosecha());
         dto.setLongitud(orchard.getLongitud());
         dto.setAltura_nivel_del_mar(orchard.getAltura_nivel_del_mar());
