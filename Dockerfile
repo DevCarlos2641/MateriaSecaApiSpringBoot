@@ -15,6 +15,7 @@ RUN ./gradlew dependencies --no-daemon || return 0
 # Copiamos el resto del código fuente
 COPY . .
 
+RUN chmod +x gradlew
 # Construimos el JAR
 RUN ./gradlew clean build -x test --no-daemon
 
