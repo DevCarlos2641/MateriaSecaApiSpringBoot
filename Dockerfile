@@ -15,6 +15,7 @@ RUN ./gradlew dependencies --no-daemon || return 0
 # Copiamos el resto del código fuente
 COPY . .
 
+RUN chmod +x gradlew
 # Construimos el jar ejecutable con nombre fijo
 RUN ./gradlew clean bootJar -x test --no-daemon \
     && mv build/libs/app.jar app.jar
