@@ -37,5 +37,5 @@ tasks.withType<Test> {
 }
 
 tasks.withType<Jar> {
-	archiveFileName.set("materia-seca-app.jar") // Nombre fijo para el archivo JAR
+	archiveFileName.set("app.jar") // Nombre fijo para el archivo JAR
 }
