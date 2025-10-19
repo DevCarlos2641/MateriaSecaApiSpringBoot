@@ -33,12 +33,12 @@ services:
     networks:
       - my-network
 
-  spring-boot-other-app:
-    image: other-app-springboot
-    ports:
-      - "8081:8081"
-    networks:
-      - my-network
+#  spring-boot-other-app:
+#    image: other-app-springboot
+#    ports:
+#      - "8081:8081"
+#    networks:
+#      - my-network
 
 networks:
   my-network:
